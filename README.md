@@ -1,3 +1,6 @@
+> [!WARNING]
+> 本项目已停止维护，不再提供更新与支持，感谢大家的使用。
+
 # MiGPT-Next
 
 `MiGPT-Next` 是基于 [MiGPT](https://github.com/idootop/mi-gpt) 的升级版本，支持**​ 自定义消息回复 ​**。
