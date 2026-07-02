@@ -1,4 +1,4 @@
-# MiGPT-Next
+# 51migpt
 
 让小爱音箱「听你的」，解锁无限可能。
 
@@ -7,13 +7,13 @@
 ### 1. 安装依赖
 
 ```shell
-pnpm install @mi-gpt/next
+pnpm install @51migpt/next
 ```
 
 ### 2. 运行
 
 ```typescript
-import { MiGPT } from "@mi-gpt/next";
+import { MiGPT } from "@51migpt/next";
 
 async function main() {
   await MiGPT.start({
@@ -81,9 +81,9 @@ await MiGPT.start({
      * 支持兼容 OpenAI 接口的大模型服务，比如：DeepSeek V3 等
      *
      * 注意：一般以 /v1 结尾，不包含 /chat/completions 部分
-     * - ✅ https://api.openai.com/v1
-     * - ❌ https://api.openai.com/v1/（最后多了一个 /）
-     * - ❌ https://api.openai.com/v1/chat/completions（不需要加 /chat/completions）
+     * - https://api.openai.com/v1
+     * - https://api.openai.com/v1/（最后多了一个 /）
+     * - https://api.openai.com/v1/chat/completions（不需要加 /chat/completions）
      */
     baseURL: "https://api.openai.com/v1",
   },
@@ -100,7 +100,7 @@ await MiGPT.start({
 
 ## 高级选项
 
-### 1. 🔥 自定义消息回复
+### 1. 自定义消息回复
 
 ```typescript
 await MiGPT.start({
@@ -174,8 +174,8 @@ await MiGPT.start({
      * 可以在提示词模板中引用上面提供的变量
      *
      * 比如：
-     * - {age}  会被解析成 👉 18
-     * - {time} 会被解析成 👉 2025/4/6 11:02:37
+     * - {age}  会被解析成 18
+     * - {time} 会被解析成 2025/4/6 11:02:37
      */
     system: "现在是 {time}，你已经 {age} 岁了。",
   },
@@ -221,8 +221,10 @@ await MiGPT.start({
 2. **非官方声明**
    本项目由第三方开发者独立开发，与小米集团及其关联方（下称"权利方"）无任何隶属/合作关系，未获其官方授权/认可或技术支持。项目中涉及的商标、固件、云服务的所有权利归属小米集团。若权利方主张权益，使用者应立即主动停止使用并删除本项目。
 
-继续下载或运行本项目，即表示您已完整阅读并同意[用户协议](https://github.com/idootop/migpt-next/blob/main/agreement.md)，否则请立即终止使用并彻底删除本项目。
+继续下载或运行本项目，即表示您已完整阅读并同意[用户协议](agreement.md)，否则请立即终止使用并彻底删除本项目。
 
 ## License
 
-MIT License © 2024-PRESENT [Del Wang](https://del.wang)
+本项目基于 [MiGPT-Next](https://github.com/idootop/migpt-next) 进行二次开发。
+
+MIT License (c) 2024-PRESENT [pirloyang](https://github.com/pirloyang)
