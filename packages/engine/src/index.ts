@@ -1,8 +1,8 @@
-import { ChatBot, type IMessage } from '@mi-gpt/chat';
-import type { ChatConfig } from '@mi-gpt/chat/config';
-import { OpenAI } from '@mi-gpt/openai';
-import { deepMerge, sleep } from '@mi-gpt/utils';
-import { jsonEncode } from '@mi-gpt/utils/parse';
+import { ChatBot, type IMessage } from '@51migpt/chat';
+import type { ChatConfig } from '@51migpt/chat/config';
+import { OpenAI } from '@51migpt/openai';
+import { deepMerge, sleep } from '@51migpt/utils';
+import { jsonEncode } from '@51migpt/utils/parse';
 import { BaseEngine, type IReply } from './base.js';
 
 // @ts-ignore

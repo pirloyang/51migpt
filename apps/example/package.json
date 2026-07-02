@@ -1,12 +1,12 @@
 {
-  "name": "@mi-gpt/example",
+  "name": "@51migpt/example",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "@mi-gpt/next": "^1.3.2"
+    "@51migpt/next": "workspace:*"
   },
   "engines": {
     "node": ">=16"

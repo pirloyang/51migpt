@@ -1,6 +1,6 @@
-import { sleep } from '@mi-gpt/utils';
-import { isNotEmpty } from '@mi-gpt/utils/is';
-import { jsonEncode } from '@mi-gpt/utils/parse';
+import { sleep } from '@51migpt/utils';
+import { isNotEmpty } from '@51migpt/utils/is';
+import { jsonEncode } from '@51migpt/utils/parse';
 import axios, { type AxiosRequestConfig, type CreateAxiosDefaults } from 'axios';
 import { getMiService } from '../mi/index.js';
 import type { MiAccount } from '../mi/typing.js';

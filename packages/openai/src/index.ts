@@ -1,5 +1,5 @@
-import { deepMerge } from '@mi-gpt/utils';
-import type { Prettify } from '@mi-gpt/utils/typing';
+import { deepMerge } from '@51migpt/utils';
+import type { Prettify } from '@51migpt/utils/typing';
 import OpenAIClient from 'openai';
 import type { RequestOptions } from 'openai/core';
 import type { ChatCompletionCreateParamsBase } from 'openai/resources/chat/completions';

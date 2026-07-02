@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
-import type { IMessage } from '@mi-gpt/chat';
-import { firstOf, lastOf } from '@mi-gpt/utils';
+import type { IMessage } from '@51migpt/chat';
+import { firstOf, lastOf } from '@51migpt/utils';
 import { MiService } from './service.js';
 
 class _MiMessage {

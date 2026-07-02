@@ -1,5 +1,5 @@
 {
-  "extends": "@mi-gpt/config/typescript",
+  "extends": "@51migpt/config/typescript",
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

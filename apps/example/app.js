@@ -1,4 +1,4 @@
-import { MiGPT } from '@mi-gpt/next';
+import { MiGPT } from '@51migpt/next';
 import config from './config.js';
 
 // Gracefully shutdown

@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
-  "name": "@mi-gpt/config",
+  "version": "2.0.0",
+  "name": "@51migpt/config",
   "description": "MiGPT 公共配置",
   "keywords": ["migpt"],
   "type": "module",

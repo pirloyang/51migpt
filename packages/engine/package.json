@@ -1,6 +1,6 @@
 {
-  "version": "1.2.1",
-  "name": "@mi-gpt/engine",
+  "version": "2.0.0",
+  "name": "@51migpt/engine",
   "description": "MiGPT 核心模块",
   "keywords": ["migpt"],
   "type": "module",
@@ -21,13 +21,13 @@
     }
   },
   "dependencies": {
-    "@mi-gpt/utils": "workspace:*",
-    "@mi-gpt/chat": "workspace:*",
-    "@mi-gpt/stream": "workspace:*",
-    "@mi-gpt/openai": "workspace:*"
+    "@51migpt/utils": "workspace:*",
+    "@51migpt/chat": "workspace:*",
+    "@51migpt/stream": "workspace:*",
+    "@51migpt/openai": "workspace:*"
   },
   "devDependencies": {
-    "@mi-gpt/config": "workspace:*",
+    "@51migpt/config": "workspace:*",
     "@types/node": "^22.14.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"

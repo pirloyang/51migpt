@@ -1,5 +1,5 @@
-import { deepMerge, sleep } from '@mi-gpt/utils';
-import { removeEmojis } from '@mi-gpt/utils/string';
+import { deepMerge, sleep } from '@51migpt/utils';
+import { removeEmojis } from '@51migpt/utils/string';
 import { type StreamResponseConfig, kDefaultStreamResponseConfig } from './config.js';
 
 type ResponseStatus = 'idle' | 'responding' | 'finished' | 'canceled';

@@ -1,8 +1,8 @@
 import { randomUUID } from 'node:crypto';
-import { OpenAI } from '@mi-gpt/openai';
-import { StreamResponse } from '@mi-gpt/stream';
-import { deepMerge } from '@mi-gpt/utils';
-import { replaceVars, toUTC8Time } from '@mi-gpt/utils/string';
+import { OpenAI } from '@51migpt/openai';
+import { StreamResponse } from '@51migpt/stream';
+import { deepMerge } from '@51migpt/utils';
+import { replaceVars, toUTC8Time } from '@51migpt/utils/string';
 import { type ChatConfig, kDefaultChatConfig } from './config.js';
 
 export interface IMessage {

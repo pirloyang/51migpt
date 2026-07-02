@@ -1,4 +1,4 @@
-import { jsonDecode, jsonEncode } from '@mi-gpt/utils/parse';
+import { jsonDecode, jsonEncode } from '@51migpt/utils/parse';
 import * as pako from 'pako';
 import type { MiPass } from '../mi/typing.js';
 import { randomNoise, signNonce } from './hash.js';

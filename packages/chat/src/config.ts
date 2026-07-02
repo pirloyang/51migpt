@@ -1,6 +1,6 @@
-import type { OpenAIConfig } from '@mi-gpt/openai/config';
-import type { StreamResponseConfig } from '@mi-gpt/stream/config';
-import type { DeepPartial } from '@mi-gpt/utils/typing';
+import type { OpenAIConfig } from '@51migpt/openai/config';
+import type { StreamResponseConfig } from '@51migpt/stream/config';
+import type { DeepPartial } from '@51migpt/utils/typing';
 
 export type ChatConfig = DeepPartial<{
   stream: StreamResponseConfig;

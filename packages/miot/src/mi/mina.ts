@@ -1,5 +1,5 @@
-import { clamp } from '@mi-gpt/utils';
-import { jsonDecode, jsonEncode } from '@mi-gpt/utils/parse';
+import { clamp } from '@51migpt/utils';
+import { jsonDecode, jsonEncode } from '@51migpt/utils/parse';
 import { encodeQuery } from '../utils/codec.js';
 import { Debugger } from '../utils/debug.js';
 import { uuid } from '../utils/hash.js';
@@ -199,6 +199,57 @@ export class MiNA {
       action: 'stop',
     });
     return res?.code === 0;
+  }
+
+  /**
+   * 强制中断当前播放（包括小爱同学的 TTS 回复）
+   *
+   * 多步中断策略：
+   * 1. 停止 mediaplayer（强制停止当前播放）
+   * 2. 暂停播放（双重保险）
+   * 3. 调用 mibrain 的 stop 操作（针对小爱 TTS）
+   *
+   * @param maxRetry 最大重试次数
+   * @returns 是否成功中断
+   */
+  async interrupt(maxRetry = 2): Promise<boolean> {
+    let success = false;
+
+    for (let retry = 0; retry <= maxRetry; retry++) {
+      try {
+        // 第一步：强制停止 mediaplayer
+        await this.callUbus('mediaplayer', 'player_play_operation', {
+          action: 'stop',
+        });
+
+        // 第二步：暂停播放作为双重保险
+        await this.callUbus('mediaplayer', 'player_play_operation', {
+          action: 'pause',
+        });
+
+        // 第三步：尝试停止 mibrain 服务（针对小爱 TTS）
+        await this.callUbus('mibrain', 'stop');
+
+        // 第四步：播放空文本抢占音频通道
+        await this.callUbus('mibrain', 'text_to_speech', {
+          text: '',
+          save: 0,
+        });
+
+        // 检查播放状态
+        const status = await this.getStatus();
+        if (status?.status === 'idle' || status?.status === 'stopped') {
+          success = true;
+          break;
+        }
+      } catch (error) {
+        if (Debugger.debug) {
+          console.error('❌ MiNA.interrupt 重试失败:', error);
+        }
+      }
+    }
+
+    return success;
   }
 
   /**

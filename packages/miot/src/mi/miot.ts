@@ -1,4 +1,4 @@
-import { jsonEncode } from '@mi-gpt/utils/parse';
+import { jsonEncode } from '@51migpt/utils/parse';
 import { decodeMIoT, encodeMIoT, encodeQuery } from '../utils/codec.js';
 import { Debugger } from '../utils/debug.js';
 import { Http } from '../utils/http.js';

@@ -1,6 +1,6 @@
 {
-  "version": "1.1.1",
-  "name": "@mi-gpt/openai",
+  "version": "2.0.0",
+  "name": "@51migpt/openai",
   "description": "MiGPT 底层 OpenAI 接口",
   "keywords": ["migpt"],
   "type": "module",
@@ -21,12 +21,12 @@
     }
   },
   "dependencies": {
-    "@mi-gpt/utils": "workspace:*",
+    "@51migpt/utils": "workspace:*",
     "openai": "^4.91.1",
     "proxy-agent": "^6.5.0"
   },
   "devDependencies": {
-    "@mi-gpt/config": "workspace:*",
+    "@51migpt/config": "workspace:*",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },

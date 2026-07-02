@@ -1,8 +1,8 @@
-import { ChatBot, type IMessage } from '@mi-gpt/chat';
-import type { IReply } from '@mi-gpt/engine/base';
-import { type EngineConfig, MiGPTEngine } from '@mi-gpt/engine/index';
-import { deepMerge, sleep } from '@mi-gpt/utils';
-import type { DeepPartial, Prettify } from '@mi-gpt/utils/typing';
+import { ChatBot, type IMessage } from '@51migpt/chat';
+import type { IReply } from '@51migpt/engine/base';
+import { type EngineConfig, MiGPTEngine } from '@51migpt/engine/index';
+import { deepMerge, sleep } from '@51migpt/utils';
+import type { DeepPartial, Prettify } from '@51migpt/utils/typing';
 import { MiMessage } from './message.js';
 import { MiService, type MiServiceConfig } from './service.js';
 import { MiSpeaker } from './speaker.js';

@@ -1,4 +1,4 @@
-import type { DeepPartial, Prettify } from '@mi-gpt/utils/typing';
+import type { DeepPartial, Prettify } from '@51migpt/utils/typing';
 import type { ClientOptions } from 'openai';
 import type { RequestOptions } from 'openai/core';
 import type { ChatCompletionCreateParamsBase } from 'openai/resources/chat/completions';

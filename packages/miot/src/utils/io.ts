@@ -1,7 +1,7 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
-import { jsonDecode, jsonEncode } from '@mi-gpt/utils/parse';
+import { jsonDecode, jsonEncode } from '@51migpt/utils/parse';
 
 export const kRoot = process.cwd();
 

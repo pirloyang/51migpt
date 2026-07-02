@@ -1,5 +1,5 @@
 /**
- * @type {import('@mi-gpt/next').MiGPTConfig}
+ * @type {import('@51migpt/next').MiGPTConfig}
  */
 export default {
   debug: false, // 是否开启调试模式

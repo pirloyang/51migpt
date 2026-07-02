@@ -1,5 +1,5 @@
-import type { IMessage } from '@mi-gpt/chat';
-import type { StreamResponse } from '@mi-gpt/stream';
+import type { IMessage } from '@51migpt/chat';
+import type { StreamResponse } from '@51migpt/stream';
 
 export interface IReply {
   /**

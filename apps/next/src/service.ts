@@ -4,8 +4,8 @@ import {
   type MiServiceConfig as _MiServiceConfig,
   getMIoT,
   getMiNA,
-} from '@mi-gpt/miot';
-import { jsonEncode } from '@mi-gpt/utils/parse';
+} from '@51migpt/miot';
+import { jsonEncode } from '@51migpt/utils/parse';
 import { assert } from './utils.js';
 
 export type MiServiceConfig = _MiServiceConfig;
@@ -13,8 +13,10 @@ export type MiServiceConfig = _MiServiceConfig;
 class _MiService {
   MiNA?: MiNA;
   MiOT?: MIoT;
+  config?: { debug: boolean; speaker: MiServiceConfig };
 
   async init(config: { debug: boolean; speaker: MiServiceConfig }) {
+    this.config = config;
     const { debug = false, speaker } = config;
 
     assert(!!speaker.did, '❌ Speaker 缺少 did 参数');
