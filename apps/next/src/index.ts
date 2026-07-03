@@ -25,7 +25,7 @@ export type MiGPTConfig = Prettify<
 const kDefaultMiGPTConfig: MiGPTConfig = {
   debug: false,
   speaker: {
-    heartbeat: 1000,
+    heartbeat: 500,
   },
 };
 

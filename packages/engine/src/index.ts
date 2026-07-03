@@ -70,6 +70,12 @@ export abstract class MiGPTEngine extends BaseEngine {
 
     this.lastMsg = msg;
 
+    const isAIKeyword = this.config.callAIKeywords?.some((k) => msg.text.startsWith(k));
+
+    if (isAIKeyword) {
+      await this.speaker.abortXiaoAI();
+    }
+
     let reply = await this.config.onMessage?.(this, msg);
 
     if (reply?.handled) {
@@ -81,14 +87,8 @@ export abstract class MiGPTEngine extends BaseEngine {
       return;
     }
 
-    if (this.config.callAIKeywords?.some((k) => msg.text.startsWith(k))) {
-      // 打断原来的小爱回复
-      await this.speaker.abortXiaoAI();
-
-      // 调用 AI 回答问题
+    if (isAIKeyword) {
       reply = await this.askAI(msg);
-
-      // 播放回复
       await this._response(msg, reply);
     }
   }

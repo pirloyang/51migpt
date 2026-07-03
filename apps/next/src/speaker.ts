@@ -36,11 +36,13 @@ class SpeakerManager implements ISpeaker {
     }
 
     try {
-      // 使用 MiNA 提供的专用中断方法
       const result = await MiService.MiNA.interrupt(maxRetry);
 
-      // 等待设备状态稳定
-      await sleep(100);
+      await sleep(50);
+
+      await MiService.MiNA.play({ text: '' });
+
+      await sleep(50);
 
       return result;
     } catch (error) {
